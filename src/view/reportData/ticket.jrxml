@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ticket" pageWidth="393" pageHeight="192" orientation="Landscape" columnWidth="393" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="cda920fe-62a7-4847-8b9d-19eb5048288b">
+	<parameter name="passengerName" class="java.lang.String"/>
+	<parameter name="cargo" class="java.lang.String"/>
+	<parameter name="from" class="java.lang.String"/>
+	<parameter name="too" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="time" class="java.lang.String"/>
+	<parameter name="seats" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band height="143" splitType="Prevent">
+			<image>
+				<reportElement x="0" y="0" width="393" height="142" uuid="3b749e26-0d11-4028-8b67-2adc6f4cac39">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA["C:/Users/jayed/Desktop/GDSE-Sem-final/Expo-Rail/src/view/reportData/ticket-template.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="393" height="20" uuid="c8343ca3-0a84-49c0-ad38-aa5f955b4bd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Expo-Rail Passenger Service - Since 2015]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="124" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="20" y="13" width="59" height="16" uuid="b8f86bc2-d714-4309-adba-f09897ba6ebb"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Passenger : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="30" width="60" height="20" uuid="e5889cce-ebf4-4c35-aa98-3a4ce41a874b"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Cargo : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="87" width="33" height="13" uuid="e834d682-a836-4be1-99ad-39411ced899f"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="13" width="100" height="18" uuid="12d9af00-0ff4-4c6d-b0cb-168a63090c1a"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{passengerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="32" width="80" height="16" uuid="b4af30b6-3792-49db-a023-85f918830beb"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{cargo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="70" width="30" height="18" uuid="5749cfb7-5470-49e1-96ec-e4df2c730772"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Time : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="87" width="50" height="13" uuid="d38371e9-5e44-46b2-9d65-7331b159a3d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="7" width="70" height="30" uuid="0bed2f51-02f9-4c43-aa67-dc3203200760"/>
+				<textElement textAlignment="Right">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="70" width="50" height="15" uuid="1e490a0c-fbff-4a72-a632-55b49a29bd12"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{time}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="350" y="7" width="23" height="30" uuid="0d5d095f-808c-4bad-af02-075d7e10cbce"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[/=]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="76" width="58" height="35" uuid="71956040-5447-4f8e-b7bb-47d35827cca2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{seats}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="315" y="54" width="28" height="23" uuid="2eb26f7b-1fd3-4cf2-ad7a-24076ba939a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[seats]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="13" width="40" height="19" uuid="6aa2c416-c9c4-4fff-a0c4-d16b045122bc"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[from : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="32" width="110" height="23" uuid="86a1a0c7-8472-4b72-9df2-8d4d1d7816ea"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="60" width="21" height="19" uuid="f80b6a75-c78a-4bf5-bbe3-187fa68d3ed0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[to : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="73" width="100" height="20" uuid="96e1dc5c-7c2f-46ad-a4c0-56e15b38454b"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{too}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="41">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="393" height="27" backcolor="#F0D24F" uuid="fd7ee3d1-6959-41be-94dc-8236d15904ad">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Developed by jaydevs | all rights reserved]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

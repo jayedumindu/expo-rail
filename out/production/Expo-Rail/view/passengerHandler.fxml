@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="540.0" prefWidth="931.0" style="-fx-background-color: #7a5f2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.passengerHandlerController">
+   <children>
+      <TabPane layoutY="51.0" prefHeight="616.0" prefWidth="1084.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dashboard">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a5c7c2;">
+                     <children>
+                        <ImageView fitHeight="578.0" fitWidth="1084.0" layoutY="-1.0" opacity="0.68">
+                           <image>
+                              <Image url="@../etc/wallpaper3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Region layoutX="59.0" layoutY="270.0" opacity="0.97" prefHeight="254.0" prefWidth="959.0" style="-fx-background-color: #ad411d; -fx-background-radius: 5;">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Region>
+                        <Region layoutX="417.0" layoutY="68.0" prefHeight="131.0" prefWidth="200.0" style="-fx-background-color: #7fd49e; -fx-background-radius: 15;">
+                           <effect>
+                              <DropShadow />
+                           </effect></Region>
+                        <Region layoutX="73.0" layoutY="66.0" prefHeight="129.0" prefWidth="203.0" style="-fx-background-color: #7fd49e; -fx-background-radius: 15;">
+                           <effect>
+                              <DropShadow />
+                           </effect></Region>
+                        <Label layoutX="135.0" layoutY="90.0" text="Trains" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="448.0" layoutY="90.0" text="Passengers" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Region layoutX="755.0" layoutY="66.0" prefHeight="132.0" prefWidth="200.0" style="-fx-background-color: #7fd49e; -fx-background-radius: 15;">
+                           <effect>
+                              <DropShadow />
+                           </effect></Region>
+                        <Label layoutX="798.0" layoutY="90.0" text="Bookings" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="noOfTrainsLbl" alignment="CENTER" layoutX="158.0" layoutY="130.0" text="8" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="noOfPassengersLabel" alignment="CENTER" layoutX="508.0" layoutY="130.0" text="8" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="noOfBookingsLbl" alignment="CENTER" layoutX="847.0" layoutY="130.0" text="9" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="376.0" layoutY="276.0" opacity="0.71" prefHeight="39.0" prefWidth="282.0" style="-fx-background-color: #ad411d; -fx-background-radius: 10;" text="Next Train Available" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameTxtLabel" alignment="CENTER" layoutX="235.0" layoutY="378.0" opacity="0.71" prefHeight="39.0" prefWidth="282.0" style="-fx-background-color: #ad411d; -fx-background-radius: 10;" text="Train Name " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="timeTxtLabel" alignment="CENTER" layoutX="565.0" layoutY="378.0" opacity="0.71" prefHeight="39.0" prefWidth="282.0" style="-fx-background-color: #ad411d; -fx-background-radius: 10;" text="12:40:00" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Reserve">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ba8fa5;">
+                     <children>
+                        <ImageView fitHeight="579.0" fitWidth="1084.0" layoutX="1.0" layoutY="-1.0">
+                           <image>
+                              <Image url="@../etc/wallpaper2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Region layoutX="25.0" layoutY="48.0" opacity="0.8" prefHeight="188.0" prefWidth="1002.0" style="-fx-background-color: #e8bb6d; -fx-background-radius: 5;" />
+                        <Region layoutX="710.0" layoutY="356.0" prefHeight="200.0" prefWidth="314.0" style="-fx-background-color: #c2e0f0;">
+                           <effect>
+                              <MotionBlur />
+                           </effect></Region>
+                        <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="827.0" layoutY="443.0" opacity="0.43">
+                           <image>
+                              <Image url="@../etc/train.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutY="39.0" prefHeight="4.0" prefWidth="1084.0" />
+                        <Label layoutX="125.0" layoutY="14.0" text="Passenger Details">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="nicTxt" layoutX="48.0" layoutY="74.0" onKeyReleased="#nicKeyReleased" prefHeight="31.0" prefWidth="198.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <TextField fx:id="nameTxt" layoutX="294.0" layoutY="74.0" onKeyReleased="#nameKeyReleased" prefHeight="31.0" prefWidth="406.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <TextField fx:id="tpTxt" layoutX="745.0" layoutY="74.0" onKeyReleased="#tpKeyReleased" prefHeight="31.0" prefWidth="259.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <Text layoutX="48.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC" />
+                        <Text layoutX="294.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="745.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone Number" />
+                        <TextArea fx:id="addressTxt" layoutX="48.0" layoutY="131.0" onKeyReleased="#addressKeyreleased" prefHeight="92.0" prefWidth="469.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextArea>
+                        <Text layoutX="50.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" />
+                        <Separator layoutY="257.0" prefHeight="4.0" prefWidth="1084.0" />
+                        <ComboBox fx:id="startCombo" layoutX="147.0" layoutY="282.0" onAction="#startStSelectedOnAction" prefHeight="31.0" prefWidth="197.0" promptText="start" style="-fx-background-radius: 10;">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="endCombo" layoutX="436.0" layoutY="282.0" onAction="#endStSelectedOnAction" prefHeight="31.0" prefWidth="182.0" promptText="end" style="-fx-background-radius: 10;">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Label fx:id="vehicleTagLabel" alignment="CENTER" layoutX="730.0" layoutY="377.0" prefHeight="25.0" prefWidth="272.0">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="reserveBtn" layoutX="760.0" layoutY="155.0" mnemonicParsing="false" onAction="#reserveOnAction" prefHeight="45.0" prefWidth="99.0" text="Reserve">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Button>
+                        <Region layoutX="254.0" layoutY="472.0" prefHeight="56.0" prefWidth="256.0" style="-fx-background-color: #c2e0f0;">
+                           <effect>
+                              <MotionBlur />
+                           </effect></Region>
+                        <Label fx:id="valueLabel" layoutX="387.0" layoutY="487.0" prefHeight="25.0" prefWidth="102.0">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="vehicleCombo" layoutX="755.0" layoutY="282.0" onAction="#vehicleSelectedOnAction" prefHeight="31.0" prefWidth="201.0" promptText="Locomotive" style="-fx-background-radius: 10;">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Label fx:id="timeLabel" alignment="CENTER" layoutX="763.0" layoutY="416.0" prefHeight="25.0" prefWidth="206.0">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="vehicleTypeLabel" alignment="CENTER" layoutX="817.0" layoutY="460.0" prefHeight="25.0" prefWidth="107.0">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="c2Spinner" layoutX="274.0" layoutY="385.0" prefHeight="31.0" prefWidth="95.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Spinner>
+                        <Spinner fx:id="c1Spinner" layoutX="72.0" layoutY="385.0" prefHeight="31.0" prefWidth="95.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Spinner>
+                        <Spinner fx:id="c3Spinner" layoutX="495.0" layoutY="385.0" prefHeight="31.0" prefWidth="95.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Spinner>
+                        <Text layoutX="94.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class 1" />
+                        <Text layoutX="299.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class 2" />
+                        <Text layoutX="520.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class 3" />
+                        <Label layoutX="139.0" layoutY="236.0" text="Cargo Details">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="281.0" layoutY="487.0" prefHeight="25.0" prefWidth="106.0" text="Value : Rs.">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Passengers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="passengerTable" layoutX="24.0" layoutY="20.0" opacity="0.7" prefHeight="532.0" prefWidth="1034.0">
+                          <columns>
+                            <TableColumn fx:id="pasNic" prefWidth="150.0" text="NIC" />
+                            <TableColumn fx:id="pasName" minWidth="0.0" prefWidth="209.0" text="Name" />
+                              <TableColumn fx:id="pasAddress" minWidth="0.0" prefWidth="295.0" text="Address" />
+                              <TableColumn fx:id="pasTpNo" minWidth="0.0" prefWidth="226.0" text="Telephone Number" />
+                              <TableColumn fx:id="passOptions" minWidth="0.0" prefWidth="153.0" text="Options" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="info">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="reservationTable" layoutX="25.0" layoutY="19.0" opacity="0.7" prefHeight="535.0" prefWidth="1034.0">
+                           <columns>
+                              <TableColumn fx:id="resNIC" prefWidth="150.0" text="Passenger-NIC" />
+                              <TableColumn fx:id="vehicleRes" minWidth="0.0" prefWidth="129.0" text="Vehicle Reg.No" />
+                              <TableColumn fx:id="trainRes" minWidth="0.0" prefWidth="165.0" text="Locomotive" />
+                              <TableColumn fx:id="seatsRes" minWidth="0.0" prefWidth="100.0" text="No of seats" />
+                              <TableColumn fx:id="inRes" minWidth="0.0" prefWidth="154.0" text="In" />
+                              <TableColumn fx:id="outRes" minWidth="0.0" prefWidth="128.0" text="Out" />
+                              <TableColumn fx:id="valueRes" minWidth="0.0" prefWidth="129.0" text="Value" />
+                              <TableColumn fx:id="optionsRes" minWidth="0.0" prefWidth="78.0" text="Options" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="receipt">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="159.0" layoutY="73.0" prefHeight="367.0" prefWidth="767.0" style="-fx-background-color: #dbb35c; -fx-border-color: black;">
+                           <children>
+                              <Line endX="659.0" layoutX="108.0" layoutY="48.0" startX="-108.0" />
+                              <Line endX="659.0" layoutX="108.0" layoutY="208.0" startX="-108.0" />
+                              <Line endX="659.0" layoutX="108.0" layoutY="111.0" startX="-108.0" />
+                              <Label layoutX="14.0" layoutY="14.0" text="Name">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="414.0" layoutY="60.0" text="to">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Line endX="-100.0" endY="159.0" layoutX="778.0" layoutY="208.0" startX="-100.0" />
+                              <Line endX="-100.0" endY="159.0" layoutX="692.0" layoutY="208.0" startX="-100.0" />
+                              <Line endX="-100.0" endY="159.0" layoutX="602.0" layoutY="207.0" startX="-100.0" />
+                              <Label layoutX="515.0" layoutY="216.0" text="C1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="15.0" layoutY="60.0" text="From">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="125.0" text="Cargo">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="227.0" text="Total (Rs)">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="603.0" layoutY="217.0" text="C2">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="686.0" layoutY="217.0" text="C3">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-100.0" endY="62.5" layoutX="491.0" layoutY="49.0" startX="-100.0" />
+                              <Label fx:id="recName" alignment="CENTER" layoutX="111.0" layoutY="14.0" prefHeight="21.0" prefWidth="464.0" textAlignment="CENTER" />
+                              <Label fx:id="recCargo" alignment="CENTER" layoutX="155.0" layoutY="136.0" prefHeight="45.0" prefWidth="437.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font></Label>
+                              <Label fx:id="recTotal" alignment="CENTER" layoutX="133.0" layoutY="264.0" prefHeight="45.0" prefWidth="251.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font></Label>
+                              <Label fx:id="recTo" alignment="CENTER" layoutX="467.0" layoutY="71.0" prefHeight="21.0" prefWidth="251.0" textAlignment="CENTER" />
+                              <Label fx:id="recFrom" alignment="CENTER" layoutX="92.0" layoutY="71.0" prefHeight="21.0" prefWidth="251.0" textAlignment="CENTER" />
+                              <Label fx:id="recC1" alignment="CENTER" layoutX="515.0" layoutY="267.0" prefHeight="45.0" prefWidth="57.0" text="0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="recC2" alignment="CENTER" layoutX="603.0" layoutY="267.0" prefHeight="45.0" prefWidth="57.0" text="0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="recC3" alignment="CENTER" layoutX="692.0" layoutY="267.0" prefHeight="45.0" prefWidth="57.0" text="0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Button fx:id="printReceiptBtn" layoutX="490.0" layoutY="490.0" mnemonicParsing="false" onAction="#printReceiptOnAction" text="Print Receipt" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="127.0" layoutY="2.0" text="WELCOME!" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="555.0" layoutY="11.0" text="7th March Wednesday 2022" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="996.0" layoutY="9.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-radius: 20;" text="Log Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="7.0" layoutY="2.0">
+         <image>
+            <Image url="@../etc/1648092024278.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="819.0" layoutY="11.0" prefHeight="27.0" prefWidth="90.0" text="22:40 " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="498.0" layoutY="11.0" text="Date - " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="amLbl" layoutX="906.0" layoutY="11.0" prefHeight="27.0" prefWidth="32.0" text="PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
